@@ -40,3 +40,7 @@ Veja em https://github.com/LigeroSmart/ligerosmart-stack
 ## Instruções para desenvolvedores
 
 Veja em https://www.youtube.com/watch?v=xDq4-Mb9trY&list=PLRWVfxypDIYScfNPrf3TkhLAm26QlxPPI
+
+## Documentos e tutoriais
+
+Veja em https://docs.ligerosmart.org/
