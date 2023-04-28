@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.0">
+    <Name>SurveyExport</Name>
+    <Version>6.0.0</Version>
+    <Vendor>LigeroSmart</Vendor>
+    <URL>https://ligerosmart.com/</URL>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <ChangeLog Version="6.0.0" Date="2023-04-13 17:55:00">Módulo atualizado para a versão 6.0.0 pela Complemento. Adicionado arquivo SOPM no pacote para facilitar elaboração dos mesmos.</ChangeLog>
+    <Description Lang="en">Export response poll votes to CSV file.</Description>
+    <Description Lang="pt_BR">Exportar os votos de pesquisa de satisfação para arquivo CSV.</Description>
+    <Framework>6.x.x</Framework>
+    <IntroInstall Lang="en" Title="Tutorial" Type="pre">Please, test it before putting in production.</IntroInstall>
+    <IntroInstall Lang="pt_BR" Title="Tutorial" Type="pre">Por favor, teste antes de colocar em produção</IntroInstall>    
+    <Filelist>
+        <File Location="Kernel/Config/Files/XML/SurveyExport.xml" Permission="644" />
+        <File Location="Kernel/Modules/AgentSurveyExport.pm" Permission="644" />
+        <File Location="Custom/Ligero.SurveyExport.sopm" Permission="644" />
+    </Filelist>
+</otrs_package>

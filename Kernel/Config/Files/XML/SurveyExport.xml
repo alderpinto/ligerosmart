@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<otrs_config version="2.0" init="Application">
+    <Setting Name="Frontend::Module###AgentSurveyExport" Required="0" Valid="1">
+        <Description Translatable="1">Frontend module registration for the agent interface.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration</Navigation>
+        <Value>
+            <Item ValueType="FrontendRegistration">
+                <Hash>
+                    <Item Key="Group">
+                        <Array>
+                        </Array>
+                    </Item>
+                    <Item Key="GroupRo">
+                        <Array>
+                        </Array>
+                    </Item>
+                    <Item Key="Description">Survey CSV Export</Item>
+                    <Item Key="NavBarName">Survey</Item>
+                </Hash>
+            </Item>
+        </Value>
+    </Setting>
+    <Setting Name="Frontend::Navigation###AgentSurveyExport###002-SurveyExport" Required="0" Valid="0">
+        <Description Translatable="1">Main menu item registration.</Description>
+        <Navigation>Frontend::Agent::ModuleRegistration::MainMenu</Navigation>
+        <Value>
+            <Array>
+                <DefaultItem ValueType="FrontendNavigation">
+                    <Hash>
+                    </Hash>
+                </DefaultItem>
+            </Array>
+        </Value>
+    </Setting>
+    <Setting Name="Survey::Frontend::MenuModule###025-SurveyExport" Required="0" Valid="1">
+        <Description Translatable="1">Shows a link in the menu to export the survey statistics in the zoom view of the agent interface.</Description>
+        <Navigation>Frontend::Agent::Survey::MenuModule</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Module">Kernel::Output::HTML::SurveyMenu::Generic</Item>
+                <Item Key="Name">Export</Item>
+                <Item Key="Description" Translatable="1">Export Survey Details</Item>
+                <Item Key="Action">AgentSurveyExport</Item>
+                <Item Key="Link">Action=AgentSurveyExport;SurveyID=[% Data.SurveyID | uri %]</Item>
+                <Item Key="Target"></Item>
+            </Hash>
+        </Value>
+    </Setting>
+</otrs_config>
